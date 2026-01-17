@@ -1,10 +1,10 @@
 [package]
-name = "testnet_nft"
+name = "sui_moments"
 version = "0.0.1"
 edition = "2024.beta"
 
 [dependencies]
-Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+Walrus = { git = "https://github.com/MystenLabs/walrus.git", subdir = "testnet-contracts/walrus", rev = "releases/walrus-v1.34.0-release" }
 
 [addresses]
-ticket_module = "0x0"
+sui_moments = "0x0"
