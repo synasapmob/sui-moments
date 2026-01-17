@@ -4,6 +4,7 @@ import HomePhotoReply from "./HomePhotoReply";
 import HomePhotoContent from "./HomePhotoContent";
 import { useRef } from "react";
 import HomePhotoActivity from "./HomePhotoActivity";
+import HomeCamera from "../HomeCamera";
 
 export default function HomePhoto() {
   const scrollViewRef = useRef<ScrollView>(null);
@@ -17,14 +18,13 @@ export default function HomePhoto() {
       pagingEnabled={true}
       showsVerticalScrollIndicator={false}
     >
+      <View style={{ height: SCREEN_HEIGHT }}>
+        <HomeCamera />
+      </View>
+
       {[...Array(10)].map((_, index) => {
         return (
-          <View
-            key={index}
-            style={{
-              height: SCREEN_HEIGHT,
-            }}
-          >
+          <View key={index} style={{ height: SCREEN_HEIGHT }}>
             <HomePhotoContent />
 
             <HomePhotoHeader />
