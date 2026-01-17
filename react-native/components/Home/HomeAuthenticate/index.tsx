@@ -1,8 +1,15 @@
+import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
 
-export default function HomeAuthenticate() {
+interface HomeAuthenticateProps {
+  setAccount: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function HomeAuthenticate({
+  setAccount,
+}: HomeAuthenticateProps) {
   return (
-    <View className="gap-8 p-10 h-full justify-between flex-1">
+    <View className="gap-8 p-10 h-full justify-between">
       <View id="lasao" className="gap-8 items-center">
         <View className="bg-[#F0B100] size-24 rounded-3xl shadow-[0px_25px_50px_-12px_#F0B10033]" />
 
@@ -19,7 +26,10 @@ export default function HomeAuthenticate() {
 
       <View className="gap-6">
         <View className="gap-3">
-          <Pressable className="bg-white rounded-2xl h-12 items-center justify-center flex-row gap-3">
+          <Pressable
+            className="bg-white rounded-2xl h-12 items-center justify-center flex-row gap-3"
+            onPress={() => setAccount(true)}
+          >
             <Image
               source={require("@/assets/icons/google.png")}
               style={{
@@ -31,7 +41,10 @@ export default function HomeAuthenticate() {
             <Text className="text-black font-black">Continue with Google</Text>
           </Pressable>
 
-          <Pressable className="bg-[#1877F2] rounded-2xl h-12 items-center justify-center flex-row gap-3">
+          <Pressable
+            className="bg-[#1877F2] rounded-2xl h-12 items-center justify-center flex-row gap-3"
+            onPress={() => setAccount(true)}
+          >
             <Image
               source={require("@/assets/icons/facebook.png")}
               style={{
