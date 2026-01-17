@@ -1,5 +1,12 @@
-import { Text } from "react-native";
+import HomeAuthenticate from "@/components/Home/HomeAuthenticate";
+import { View } from "react-native";
 
 export default function Home() {
-  return <Text className="text-red-500">Home</Text>;
+  return (
+    <View
+    className="h-full flex-1"
+    >
+      <HomeAuthenticate />
+    </View>
+  );
 }
