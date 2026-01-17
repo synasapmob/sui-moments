@@ -7,7 +7,7 @@ import { useRef } from "react";
 export default function HomePhoto() {
   const scrollViewRef = useRef<ScrollView>(null);
 
-  const { height: SCREEN_HEIGHT } = Dimensions.get("window");
+  const { height: SCREEN_HEIGHT } = Dimensions.get("screen");
 
   return (
     <ScrollView
@@ -16,11 +16,14 @@ export default function HomePhoto() {
       pagingEnabled={true}
       showsVerticalScrollIndicator={false}
     >
-      <View style={{ height: SCREEN_HEIGHT - 80 }}>take camera</View>
-
       {[...Array(10)].map((_, index) => {
         return (
-          <View key={index} style={{ height: SCREEN_HEIGHT - 80 }}>
+          <View
+            key={index}
+            style={{
+              height: SCREEN_HEIGHT,
+            }}
+          >
             <HomePhotoContent />
 
             <HomePhotoHeader />

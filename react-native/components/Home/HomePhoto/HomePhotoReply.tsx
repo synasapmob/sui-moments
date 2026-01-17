@@ -25,7 +25,7 @@ export default function HomePhotoReply() {
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         className="flex-1 px-5"
-        keyboardVerticalOffset={-32}
+        keyboardVerticalOffset={-80}
       >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View className="size-full justify-end pb-[calc(48px+24px+20px)] z-[2]">
