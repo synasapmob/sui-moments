@@ -12,7 +12,7 @@ export default function HomeAuthenticate({
   return (
     <SafeAreaView>
       <View className="gap-8 p-10 h-full justify-between">
-        <View id="lasao" className="gap-8 items-center">
+        <View className="gap-8 items-center">
           <View className="bg-[#F0B100] size-24 rounded-3xl shadow-[0px_25px_50px_-12px_#F0B10033]" />
 
           <View className="items-center">

@@ -3,6 +3,7 @@ import HomePhotoHeader from "./HomePhotoHeader";
 import HomePhotoReply from "./HomePhotoReply";
 import HomePhotoContent from "./HomePhotoContent";
 import { useRef } from "react";
+import HomePhotoActivity from "./HomePhotoActivity";
 
 export default function HomePhoto() {
   const scrollViewRef = useRef<ScrollView>(null);
@@ -28,7 +29,11 @@ export default function HomePhoto() {
 
             <HomePhotoHeader />
 
-            <HomePhotoReply />
+            {Math.ceil(Math.random() * 2) === 1 ? (
+              <HomePhotoReply />
+            ) : (
+              <HomePhotoActivity />
+            )}
 
             <View className="w-full absolute bottom-0 z-[2] pb-6 items-center">
               <Pressable
