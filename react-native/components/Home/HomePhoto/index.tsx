@@ -2,7 +2,7 @@ import { Dimensions, Pressable, ScrollView, View } from "react-native";
 import HomePhotoHeader from "./HomePhotoHeader";
 import HomePhotoReply from "./HomePhotoReply";
 import HomePhotoContent from "./HomePhotoContent";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import HomePhotoActivity from "./HomePhotoActivity";
 import HomeCamera from "../HomeCamera";
 import CameraFillSVG from "@/assets/fill/camera.svg";
@@ -12,15 +12,21 @@ export default function HomePhoto() {
 
   const { height: SCREEN_HEIGHT } = Dimensions.get("screen");
 
+  const [scrollEnabled, setScrollEnabled] = useState(true);
+
   return (
     <ScrollView
       ref={scrollViewRef}
       horizontal={false}
       pagingEnabled={true}
+      scrollEnabled={scrollEnabled}
       showsVerticalScrollIndicator={false}
     >
       <View style={{ height: SCREEN_HEIGHT }}>
-        <HomeCamera />
+        <HomeCamera
+          scrollEnabled={scrollEnabled}
+          setScrollEnabled={setScrollEnabled}
+        />
       </View>
 
       {[...Array(10)].map((_, index) => {
