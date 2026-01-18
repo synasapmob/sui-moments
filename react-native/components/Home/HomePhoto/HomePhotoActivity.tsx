@@ -11,6 +11,7 @@ import {
   ScrollView,
 } from "react-native";
 import Emoji from "react-native-emoji";
+import MessageLineSVG from "@/assets/line/message.svg";
 
 const { height: SCREEN_HEIGHT } = Dimensions.get("window");
 
@@ -125,13 +126,7 @@ export default function HomePhotoActivity() {
                             <View className="w-[0.0625rem] h-6 bg-white/10" />
 
                             <View className="bg-[#F0B1001A] items-center justify-center size-8 rounded-xl">
-                              <Image
-                                source={require("@/assets/icons/btn-message.png")}
-                                style={{
-                                  width: 16,
-                                  height: 16,
-                                }}
-                              />
+                              <MessageLineSVG width={16} height={16} />
                             </View>
                           </View>
                         </View>

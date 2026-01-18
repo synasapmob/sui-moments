@@ -9,6 +9,7 @@ import {
   View,
 } from "react-native";
 import Emoji from "react-native-emoji";
+import IconsFillSVG from "@/assets/fill/icons.svg";
 
 export default function HomePhotoReply() {
   const [inputValue, setInputValue] = useState("");
@@ -48,10 +49,7 @@ export default function HomePhotoReply() {
                     <Emoji key={meta} name={meta} className="text-[1.5rem]" />
                   ))}
 
-                  <Image
-                    source={require("@/assets/icons/btn-more.png")}
-                    className="size-7"
-                  />
+                  <IconsFillSVG width={24} height={24} />
                 </View>
               </View>
             </View>

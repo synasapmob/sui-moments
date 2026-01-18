@@ -1,10 +1,11 @@
-import { Dimensions, Image, Pressable, ScrollView, View } from "react-native";
+import { Dimensions, Pressable, ScrollView, View } from "react-native";
 import HomePhotoHeader from "./HomePhotoHeader";
 import HomePhotoReply from "./HomePhotoReply";
 import HomePhotoContent from "./HomePhotoContent";
 import { useRef } from "react";
 import HomePhotoActivity from "./HomePhotoActivity";
 import HomeCamera from "../HomeCamera";
+import CameraFillSVG from "@/assets/fill/camera.svg";
 
 export default function HomePhoto() {
   const scrollViewRef = useRef<ScrollView>(null);
@@ -41,10 +42,7 @@ export default function HomePhoto() {
                   scrollViewRef.current?.scrollTo({ x: 0, y: 0 });
                 }}
               >
-                <Image
-                  source={require("@/assets/icons/btn-camera.png")}
-                  className="size-14"
-                />
+                <CameraFillSVG width={48} height={48} />
               </Pressable>
             </View>
           </View>

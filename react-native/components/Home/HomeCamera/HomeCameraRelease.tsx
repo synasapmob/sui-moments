@@ -9,6 +9,8 @@ import {
   View,
 } from "react-native";
 
+import CloseLineSVG from "@/assets/line/close.svg";
+
 interface HomeCameraReleaseProps {
   setPhotoUri: React.Dispatch<React.SetStateAction<string | undefined>>;
 }
@@ -40,10 +42,7 @@ export default function HomeCameraRelease({
           onPress={() => setPhotoUri(undefined)}
           className="bg-white/10 border border-white/15 rounded-full size-12 items-center justify-center"
         >
-          <Image
-            source={require("@/assets/icons/btn-close.png")}
-            className="size-7 ml-0"
-          />
+          <CloseLineSVG width={24} height={24} />
         </Pressable>
 
         <View className="bg-white rounded-full items-center justify-center h-14 gap-2 w-[80%]">
